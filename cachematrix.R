@@ -32,7 +32,7 @@ makeCacheMatrix <- function(x = matrix()) {
 # Computes the inverse of the special matrix returned by makeCacheMatrix.
 #
 # input parameter: x, the matrix whose inverse is needed
-# returns:         a vector containing the solution
+# returns:         a matrix containing the solution
 #
 cacheSolve <- function(x, ...) {
 
@@ -45,6 +45,6 @@ cacheSolve <- function(x, ...) {
 	data <- x$get()
 	solution <- solve(data)
 	x$setSolution(solution)
-	data
+	solution
 }
 
